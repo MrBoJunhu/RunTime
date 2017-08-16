@@ -143,8 +143,6 @@
     
     [testArray addObjectsFromArray:@[@"0",@"1",@"2",@"3"]];
     
-    NSLog(@"%@", [testArray objectAtIndex:6]);
-    
 }
 
 

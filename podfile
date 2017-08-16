@@ -1,0 +1,4 @@
+platform :ios,‘9.0’
+target :testOC do
+pod ‘Aspects’, :git => ‘https://github.com/steipete/Aspects.git’
+end

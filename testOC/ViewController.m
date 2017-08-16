@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+
 #import "MyClass.h"
 
 #import "SubMyClass.h"
@@ -16,6 +17,10 @@
 #import <objc/runtime.h>
 
 #import "SecondViewController.h"
+
+#import "Person.h"
+
+//安全可变容器测试
 
 @interface ViewController ()
 
@@ -30,9 +35,33 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor whiteColor];
+    
+}
+#pragma mark - 获取成员的所有属性
+
+- (IBAction)getProperty:(id)sender {
+    
+    unsigned int outCount = 0;
+    
+    Ivar *ivarList = class_copyIvarList([Person class], &outCount);
+    
+    for (int i  = 0; i < outCount; i ++) {
+        
+        Ivar ivar = ivarList[i];
+       
+        //获取 Person 的属性类型及名称
+        
+        const char *name = ivar_getName(ivar);
+        
+        const char *type = ivar_getTypeEncoding(ivar);
+        
+        NSLog(@"类型为 :%s 的 %s", type, name);
+        
+    }
     
 }
 
@@ -103,6 +132,18 @@
         method_exchangeImplementations(oriMethod, newMethod);
         
     }
+    
+}
+
+#pragma mark - safe array  安全的可变容器
+
+- (IBAction)safeContainerTest:(id)sender {
+    
+    NSMutableArray *testArray = [NSMutableArray array];
+    
+    [testArray addObjectsFromArray:@[@"0",@"1",@"2",@"3"]];
+    
+    NSLog(@"%@", [testArray objectAtIndex:6]);
     
 }
 

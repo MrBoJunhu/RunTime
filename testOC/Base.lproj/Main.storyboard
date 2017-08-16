@@ -22,35 +22,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VF8-x0-at8">
-                                <rect key="frame" x="95" y="317" width="184" height="90"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-zk-mVT">
+                                <rect key="frame" x="95" y="164" width="184" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="167-k3-nTc">
-                                        <rect key="frame" x="23" y="0.0" width="138" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="类目不带参方法替换"/>
-                                        <connections>
-                                            <action selector="test1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnj-OK-qSd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGo-7N-Dm2">
-                                        <rect key="frame" x="30.5" y="30" width="123" height="30"/>
-                                        <color key="backgroundColor" red="0.33333333329999998" green="0.74509803919999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="类目带参方法替换"/>
-                                        <connections>
-                                            <action selector="test2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akt-jg-N2b"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvp-fA-gEc">
-                                        <rect key="frame" x="0.0" y="60" width="184" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-XA-DRn">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VF8-x0-at8">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="90"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="167-k3-nTc">
+                                                        <rect key="frame" x="23" y="0.0" width="138" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="类目不带参方法替换"/>
+                                                        <connections>
+                                                            <action selector="test1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnj-OK-qSd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGo-7N-Dm2">
+                                                        <rect key="frame" x="30.5" y="30" width="123" height="30"/>
+                                                        <color key="backgroundColor" red="0.33333333329999998" green="0.74509803919999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="类目带参方法替换"/>
+                                                        <connections>
+                                                            <action selector="test2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akt-jg-N2b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvp-fA-gEc">
+                                                        <rect key="frame" x="0.0" y="60" width="184" height="30"/>
+                                                        <color key="backgroundColor" red="0.4549019608" green="0.73333333329999995" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="当前类方法替换其他类方法"/>
+                                                        <connections>
+                                                            <action selector="test3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFE-VZ-YIg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-D6-yd7">
+                                                <rect key="frame" x="23" y="90" width="138" height="30"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="获取成员的所有属性"/>
+                                                <connections>
+                                                    <action selector="getProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbL-5S-2js"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVg-ZF-xjg">
+                                        <rect key="frame" x="58.5" y="120" width="67" height="30"/>
                                         <color key="backgroundColor" red="0.4549019608" green="0.73333333329999995" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="当前类方法替换其他类方法"/>
+                                        <state key="normal" title="SafeArray"/>
                                         <connections>
-                                            <action selector="test3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFE-VZ-YIg"/>
+                                            <action selector="safeContainerTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTv-7l-Hwd"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-8U-7HA">
                                 <rect key="frame" x="262" y="617" width="97" height="30"/>
@@ -65,10 +91,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Mfu-zk-mVT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2su-qz-XEX"/>
                             <constraint firstItem="PpS-8U-7HA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C2N-Tb-UZE"/>
                             <constraint firstAttribute="bottom" secondItem="PpS-8U-7HA" secondAttribute="bottom" constant="20" symbolic="YES" id="c6F-7X-CFk"/>
-                            <constraint firstItem="VF8-x0-at8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uEz-Iy-MDn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VF8-x0-at8" secondAttribute="bottom" constant="260" id="zze-9e-82N"/>
+                            <constraint firstItem="Mfu-zk-mVT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="cTC-tu-rOO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6ey-Ej-9lQ"/>

@@ -1,0 +1,21 @@
+PODS:
+  - Aspects (1.4.1)
+
+DEPENDENCIES:
+  - Aspects (from `https://github.com/steipete/Aspects.git`)
+
+EXTERNAL SOURCES:
+  Aspects:
+    :git: https://github.com/steipete/Aspects.git
+
+CHECKOUT OPTIONS:
+  Aspects:
+    :commit: a80273d2090526202f176db18461f7b6765b8fb1
+    :git: https://github.com/steipete/Aspects.git
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+
+PODFILE CHECKSUM: bbcaef4cf76df2b3f2c4bd2bf3d170aee2ea7af5
+
+COCOAPODS: 1.1.1

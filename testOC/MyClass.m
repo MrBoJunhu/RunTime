@@ -36,8 +36,8 @@
 
 
 - (NSString *)showYourInputString:(NSString *)inputStr{
-    
-    return [NSString stringWithFormat:@"%@", inputStr];
+
+    return [NSString stringWithString:inputStr];
     
 }
 

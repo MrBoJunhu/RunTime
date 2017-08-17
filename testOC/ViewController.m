@@ -63,6 +63,8 @@
         
     }
     
+    free(ivarList); //不加用instruments 检测,会发现内存泄漏
+    
 }
 
 #pragma mark - 替换方法不带参数
@@ -84,11 +86,11 @@
     NSDate *date = [NSDate date];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    
-    formatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
+
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
     
     NSString *inputString = [formatter stringFromDate:date];
-    
+
     NSLog(@"%@", [cla showYourInputString:inputString]);
     
 }
@@ -159,6 +161,12 @@
 - (NSString *)replaceMethod {
     
     return @"换种姿态呀! ";
+    
+}
+
+- (void)dealloc {
+    
+    NSLog(@"页面被释放");
     
 }
 
